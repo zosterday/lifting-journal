@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiftingJournal", "LiftingJournal.csproj", "{67B59139-790E-47A0-BAAC-5B3462448D8C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67B59139-790E-47A0-BAAC-5B3462448D8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67B59139-790E-47A0-BAAC-5B3462448D8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67B59139-790E-47A0-BAAC-5B3462448D8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67B59139-790E-47A0-BAAC-5B3462448D8C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1B2F7E0B-4ED2-4CAE-9090-BE71F0523813}
+	EndGlobalSection
+EndGlobal

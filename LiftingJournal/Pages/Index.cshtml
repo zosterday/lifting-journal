@@ -1,0 +1,16 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    @if (User.Identity.IsAuthenticated)
+    {
+        <h1 class="display-4" style="display: flex; justify-content: space-between;">
+            <a href="/Lifts" style="text-decoration:underline; color:#0078d7;">Lifts</a>
+            @*<a href="/Workouts" style="text-decoration:underline; color:#0078d7;">Workouts</a>*@
+            <a href="/PRs" style="text-decoration:underline; color:#0078d7;">PRs</a>
+        </h1>
+    }
+</div>

@@ -1,0 +1,55 @@
+﻿@page
+@model LiftingJournal.Pages.Lifts.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Lift</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lift.ClientId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lift.ClientId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lift.DateLifted)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lift.DateLifted)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lift.LiftType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lift.LiftType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lift.Weight)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lift.Weight)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lift.Sets)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lift.Sets)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lift.Reps)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lift.Reps)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Lift.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

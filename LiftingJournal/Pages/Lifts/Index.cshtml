@@ -1,0 +1,84 @@
+﻿@page
+@using LiftingJournal.Extensions;
+@using LiftingJournal.Models;
+@model LiftingJournal.Pages.Lifts.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Recent Lifts</h1>
+
+<p>
+    <a asp-page="Create" class="btn btn-primary">
+        Add Lift Entry
+    </a>
+</p>
+<p>
+    <select id="LiftTypeFilter" style="width: 250px;">
+        <option value="">Any</option>
+        @foreach (var liftType in (LiftType[])Enum.GetValues(typeof(LiftType)))
+        {
+            <option value="@((int)liftType)">@liftType.GetDisplayName()</option>
+        }
+    </select>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Lift[0].DateLifted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lift[0].LiftType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lift[0].Weight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lift[0].Sets)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lift[0].Reps)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Lift)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateLifted)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LiftType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Weight)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sets)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Reps)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@*
+<script>const dropdown = document.getElementById('LiftTypeFilter');
+    dropdown.addEventListener('click', function () {
+        dropdown.size = 7
+    });
+
+    dropdown.addEventListener('blur', function () {
+        dropdown.size = 1;
+    });</script> *@

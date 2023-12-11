@@ -1,0 +1,58 @@
+﻿@page
+@model LiftingJournal.Pages.Lifts.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Lift</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lift.ClientId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lift.ClientId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lift.DateLifted)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lift.DateLifted)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lift.LiftType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lift.LiftType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lift.Weight)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lift.Weight)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lift.Sets)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lift.Sets)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lift.Reps)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lift.Reps)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Lift.Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
