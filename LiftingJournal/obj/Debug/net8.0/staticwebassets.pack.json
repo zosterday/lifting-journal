@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\LiftingJournal.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\zoste\\Documents\\GitHub\\lifting-journal\\LiftingJournal\\wwwroot\\css\\bootswatch_theme.css",
+      "PackagePath": "staticwebassets\\css\\bootswatch_theme.css"
+    },
+    {
       "Id": "C:\\Users\\zoste\\Documents\\GitHub\\lifting-journal\\LiftingJournal\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

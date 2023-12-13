@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0lGEvRi9B/Rss3+ASW4CaQ5wEquSDRW2t/QRmeYyIeY=",
+  "Hash": "A7osI+7HB1BEPp/ljQ9hLj1cIJ+YBoBsFOOepG0AYVE=",
   "Source": "LiftingJournal",
   "BasePath": "_content/LiftingJournal",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\zoste\\Documents\\GitHub\\lifting-journal\\LiftingJournal\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LiftingJournal.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\zoste\\Documents\\GitHub\\lifting-journal\\LiftingJournal\\wwwroot\\css\\bootswatch_theme.css",
+      "SourceId": "LiftingJournal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\zoste\\Documents\\GitHub\\lifting-journal\\LiftingJournal\\wwwroot\\",
+      "BasePath": "_content/LiftingJournal",
+      "RelativePath": "css/bootswatch_theme.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bootswatch_theme.css"
     },
     {
       "Identity": "C:\\Users\\zoste\\Documents\\GitHub\\lifting-journal\\LiftingJournal\\wwwroot\\css\\site.css",

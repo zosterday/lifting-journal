@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LiftingJournal")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57deae763c445a8115bf3bac7f749ada5b36c899")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+53fbb194b0682fed15b701248ebea8ffaa5df258")]
 [assembly: System.Reflection.AssemblyProductAttribute("LiftingJournal")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LiftingJournal")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
