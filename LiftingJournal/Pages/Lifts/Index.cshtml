@@ -7,6 +7,8 @@
     ViewData["Title"] = "Index";
 }
 
+<partial name="_Notification" />
+
 <h1>Recent Lifts</h1>
 
 <p>
@@ -47,19 +49,19 @@
         @foreach (var item in Model.Lift)
         {
             <tr>
-                <td>
+                <td style="color: white;">
                     @Html.DisplayFor(modelItem => item.DateLifted)
                 </td>
-                <td>
+                <td style="color: white;">
                     @Html.DisplayFor(modelItem => item.LiftType)
                 </td>
-                <td>
+                <td style="color: white;">
                     @Html.DisplayFor(modelItem => item.Weight)
                 </td>
-                <td>
+                <td style="color: white;">
                     @Html.DisplayFor(modelItem => item.Sets)
                 </td>
-                <td>
+                <td style="color: white;">
                     @Html.DisplayFor(modelItem => item.Reps)
                 </td>
                 <td>

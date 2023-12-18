@@ -10,6 +10,9 @@ using LiftingJournal.Models;
 
 namespace LiftingJournal.Pages.Lifts
 {
+
+    //TODO: Need to add special valdiation for model. Like all numbers need to be positive and ina a reasonalble range
+
     public class CreateModel : PageModel
     {
         private readonly LiftingJournal.Data.LiftingJournalContext _context;
@@ -30,14 +33,31 @@ namespace LiftingJournal.Pages.Lifts
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
+            if (Lift.Weight < 0)
+            {
+                ModelState.AddModelError("Lift.Weight", "Weight cannot be less than 0.");
+                TempData[ApiConstants.Error] = "Failed to log lift";
+            }
+            if (Lift.Sets < 0)          {
+                ModelState.AddModelError("Lift.Sets", "Sets cannot be less than 0.");
+                TempData[ApiConstants.Error] = "Failed to log lift";
+            }
+            if (Lift.Reps < 0)
+            {
+                ModelState.AddModelError("Lift.Reps", "Reps cannot be less than 0.");
+                TempData[ApiConstants.Error] = "Failed to log lift";
+            }
+
             if (!ModelState.IsValid)
             {
+                TempData[ApiConstants.Error] = "Failed to log lift";
                 return Page();
             }
 
             await _context.Lift.AddAsync(Lift);
             await _context.SaveChangesAsync();
 
+            TempData[ApiConstants.Success] = "Lift logged successfully";
             return RedirectToPage("./Index");
         }
     }

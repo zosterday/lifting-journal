@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "a67R8kpoOjO+vrsbbBfZBwbdDt7H4NKre4evLM0qeO6Gu9qpK8+gTnunrrJNOx4xJaWv290zBKHktQhU176oLg==",
+  "dgSpecHash": "knucvCDpn062jeGBTL86Br4984BkyaM6k6VXf0QeyWeI5z5vSC+Jtkb9YQ1AnPqik6SO4CS5mRsGEEEJx/BZDQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\zoste\\Documents\\GitHub\\lifting-journal\\LiftingJournal\\LiftingJournal.csproj",
+  "projectFilePath": "C:\\Users\\zoste\\OneDrive\\Documents\\GitHub\\lifting-journal\\LiftingJournal\\LiftingJournal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\zoste\\.nuget\\packages\\auth0.aspnetcore.authentication\\1.4.0\\auth0.aspnetcore.authentication.1.4.0.nupkg.sha512",
     "C:\\Users\\zoste\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",

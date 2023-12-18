@@ -45,6 +45,7 @@ namespace LiftingJournal.Pages.Lifts
         {
             if (!ModelState.IsValid)
             {
+                TempData[ApiConstants.Error] = "Failed to edit lift entry";
                 return Page();
             }
 
@@ -66,6 +67,7 @@ namespace LiftingJournal.Pages.Lifts
                 }
             }
 
+            TempData[ApiConstants.Success] = "Lift edited successfully";
             return RedirectToPage("./Index");
         }
 

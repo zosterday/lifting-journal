@@ -16,14 +16,17 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
+                <span asp-validation-for="Lift.ClientId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="Lift.DateLifted" class="control-label"></label>
                 <input asp-for="Lift.DateLifted" class="form-control" />
                 <span asp-validation-for="Lift.DateLifted" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Lift.LiftType" class="control-label"></label>
-                <select id="LiftTypeFilter" style="width: 200px;">
-                    <option value="">Any</option>
+                <select id="LiftTypeFilter" style="width: 200px;" asp-for="Lift.LiftType" class="form-control">
+                    <option value="">None Selected</option>
                     @foreach (var liftType in (LiftType[])Enum.GetValues(typeof(LiftType)))
                     {
                         <option value="@((int)liftType)">@liftType.GetDisplayName()</option>

@@ -7,7 +7,8 @@ namespace LiftingJournal.Models
     {
         public int Id { get; set; }
 
-        public string ClientId { get; private set; }
+        [Required(ErrorMessage = "Cannot retrieve valid user id.")]
+        public string ClientId { get; set; } = "me";
 
         [Display(Name = "Date Lifted")]
         [DataType(DataType.Date)]
@@ -15,7 +16,7 @@ namespace LiftingJournal.Models
         public DateTime DateLifted { get; set; }
 
         [Display(Name = "Lift Type")]
-        [Required]
+        [Required(ErrorMessage = "Please select a lift type.")]
         public LiftType LiftType { get; set; }
 
         public int Weight { get; set; } = 0;
@@ -23,7 +24,7 @@ namespace LiftingJournal.Models
         public int Sets { get; set; } = 1;
 
         [Required]
-        public int Reps { get; set; }
+        public int Reps { get; set; } = 1;
 
     }
 }

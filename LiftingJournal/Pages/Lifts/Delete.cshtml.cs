@@ -46,6 +46,7 @@ namespace LiftingJournal.Pages.Lifts
         {
             if (id == null)
             {
+                TempData[ApiConstants.Error] = "Failed to remove lift entry";
                 return NotFound();
             }
 
@@ -57,6 +58,7 @@ namespace LiftingJournal.Pages.Lifts
                 await _context.SaveChangesAsync();
             }
 
+            TempData[ApiConstants.Success] = "Lift entry removed successfully";
             return RedirectToPage("./Index");
         }
     }
