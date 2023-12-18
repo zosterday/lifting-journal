@@ -33,7 +33,8 @@ namespace LiftingJournal.Pages.Lifts
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-            if (Lift.Weight < 0)
+            Lift.ClientId = User.Claims.FirstOrDefault(c => c.Type == ApiConstants.ClaimsNameIdentifier)?.Value;
+             if (Lift.Weight < 0)
             {
                 ModelState.AddModelError("Lift.Weight", "Weight cannot be less than 0.");
                 TempData[ApiConstants.Error] = "Failed to log lift";

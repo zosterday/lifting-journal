@@ -7,10 +7,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<LiftingJournalContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("LiftingJournalContext") ?? throw new InvalidOperationException("Connection string 'LiftingJournalContext' not found.")));
 
-// Add services to the container.
+//Add services to the container.
 builder.Services
     .AddAuth0WebAppAuthentication(options => {
-        options.Domain = builder.Configuration["Auth0:Domain"];
+        options.Domain = builder.Configuration["Auth0:Domain"] ;
         options.ClientId = builder.Configuration["Auth0:ClientId"];
         options.Scope = "openid profile email";
     });

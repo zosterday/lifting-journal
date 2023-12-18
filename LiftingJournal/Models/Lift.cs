@@ -8,7 +8,7 @@ namespace LiftingJournal.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Cannot retrieve valid user id.")]
-        public string ClientId { get; set; } = "me";
+        public string ClientId { get; set; }
 
         [Display(Name = "Date Lifted")]
         [DataType(DataType.Date)]
