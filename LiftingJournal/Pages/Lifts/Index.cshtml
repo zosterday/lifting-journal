@@ -16,37 +16,40 @@
         Add Lift Entry
     </a>
 </p>
-<p>
-    <select id="LiftTypeFilter" style="width: 250px;">
+
+<form class="form-inline my-2 my-lg-0">
+    <select id="LiftTypeDropdown" style="width: 250px;" asp-for="LiftTypeFilter">
         <option value="">Any</option>
         @foreach (var liftType in (LiftType[])Enum.GetValues(typeof(LiftType)))
         {
             <option value="@((int)liftType)">@liftType.GetDisplayName()</option>
         }
     </select>
-</p>
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Filter</button>
+</form>
+
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
             <th style="color: white;">
-                @Html.DisplayNameFor(model => model.Lift[0].DateLifted)
+                @Html.DisplayNameFor(model => model.Lifts[0].DateLifted)
             </th>
             <th style="color: white;">
-                @Html.DisplayNameFor(model => model.Lift[0].LiftType)
+                @Html.DisplayNameFor(model => model.Lifts[0].LiftType)
             </th>
             <th style="color: white;">
-                @Html.DisplayNameFor(model => model.Lift[0].Weight)
+                @Html.DisplayNameFor(model => model.Lifts[0].Weight)
             </th>
             <th style="color: white;">
-                @Html.DisplayNameFor(model => model.Lift[0].Sets)
+                @Html.DisplayNameFor(model => model.Lifts[0].Sets)
             </th>
             <th style="color: white;">
-                @Html.DisplayNameFor(model => model.Lift[0].Reps)
+                @Html.DisplayNameFor(model => model.Lifts[0].Reps)
             </th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model.Lift)
+        @foreach (var item in Model.Lifts)
         {
             <tr>
                 <td style="color: white;">
@@ -73,3 +76,19 @@
         }
     </tbody>
 </table>
+
+<nav>
+    <ul class="pagination">
+            @for(var i = 1; i <= Model.TotalPages; i++)
+            {
+                string active = string.Empty;
+                if (i == Model.PageIndex)
+                {
+                    active = "active";    
+                }
+                <li class="page-item @active" aria-current="page">
+                <a class="page-link" href="?pageIndex=@(i)&liftTypeFilter=@(Model.LiftTypeFilter)">@i</a>
+                </li>
+            }
+    </ul>
+</nav>

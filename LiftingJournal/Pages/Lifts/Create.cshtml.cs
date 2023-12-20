@@ -34,7 +34,7 @@ namespace LiftingJournal.Pages.Lifts
         public async Task<IActionResult> OnPostAsync()
         {
             Lift.ClientId = User.Claims.FirstOrDefault(c => c.Type == ApiConstants.ClaimsNameIdentifier)?.Value;
-             if (Lift.Weight < 0)
+            if (Lift.Weight < 0)
             {
                 ModelState.AddModelError("Lift.Weight", "Weight cannot be less than 0.");
                 TempData[ApiConstants.Error] = "Failed to log lift";
