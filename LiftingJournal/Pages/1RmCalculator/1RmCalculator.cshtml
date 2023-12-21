@@ -1,0 +1,24 @@
+﻿@page
+@using LiftingJournal.Models
+@model LiftingJournal.Pages._1RmCalculator._1RmCalculatorModel
+
+<h1>Lifting 1RM Calculator</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="weight">Weight Lifted</label>
+        <input type="number" class="form-control" id="weight" name="weight" required>
+    </div>
+    <div class="form-group">
+        <label for="reps">Repetitions</label>
+        <input type="number" class="form-control" id="reps" name="reps" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Calculate</button>
+</form>
+
+@if (ViewData[ApiConstants.OneRepMax] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @ViewData[ApiConstants.OneRepMax]
+    </div>
+}
