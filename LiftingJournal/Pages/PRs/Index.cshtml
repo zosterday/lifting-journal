@@ -1,0 +1,38 @@
+﻿@page
+@using LiftingJournal.Extensions
+@using LiftingJournal.Models
+@model LiftingJournal.Pages.PRs.IndexModel
+
+<h1>Personal Records</h1>
+
+<form class="form-inline my-2 my-lg-0">
+    <div class="form-group">
+    <select id="LiftTypeDropdown" style="width: 250px;" asp-for="LiftTypeFilter">
+        <option value="">Any</option>
+        @foreach (var liftType in (LiftType[])Enum.GetValues(typeof(LiftType)))
+        {
+            <option value="@((int)liftType)">@liftType.GetDisplayName()</option>
+        }
+    </select>
+    </div>
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Filter</button>
+</form>
+
+@if (Model.IsNoLiftSelected)
+{
+    <div class="alert alert-warning" role="alert">
+        You have not selected a valid lift type.
+    </div>
+}
+else if (!Model.HasLiftLogs)
+{
+    <div class="alert alert-warning" role="alert">
+        You have no lift entries logged for @Model.LiftTypeFilter?.GetDisplayName().
+    </div>
+}
+else if (Model.PR != null)
+{
+    <div class="alert alert-success" role="alert">
+        Your personal record for @Model.LiftTypeFilter?.GetDisplayName() is @Model.PR lbs.
+    </div>
+}

@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace LiftingJournal.Pages._1RmCalculator
 {
-    public class _1RmCalculatorModel : PageModel
+    public class IndexModel : PageModel
     {
         public void OnGet()
         {
