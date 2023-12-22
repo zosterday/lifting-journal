@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAFXDsMWbIq0qJ2McYbkDaMAAAAAACAAAAAAAQZgAAAAEAACAAAAAJ967Q4SMBSu7WOWGya8ZRaI/FY/Y6PXhcjVnsqvjXrQAAAAAOgAAAAAIAACAAAADaFc2+LwwYOBrJC/E+3NoTnTxgxGj5NJoD+MamOIlD8IAAAADzaXX9vU90Q4gWg3QRzyD3KqwhhFeKoERGLE0TjkqAuFxTPTLjHEWmpLLDRirL3SgBp1DK777D5kcTTgyHRRDQZbRWrpj7pAwfydZCPmPQXOIBlMEaeaNPZgLXgbLnNLFLImfrlrKUkrdSHwBFI/UCpMRiyAWM9cdxvgRv3VaxjUAAAAChoMpJrFsv/K/8CY+prcTcPoEYnCZNh6Hmd6Y7BBeCEvdnc0kCPiSA1qmNQRtWQDLsOpjf5FJmQi232x6fFF+i</EncryptedPassword>
+    <History>True|2023-12-22T00:53:54.5777980Z;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="LiftingJournalContext">
+      <Value>Data Source=liftingjournalserver.database.windows.net,1433%3bInitial Catalog=liftingJournal_db%3bUser ID=admin-sql%3bPassword=Po2mm3l22Flrs12</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="LiftingJournal.Data.LiftingJournalContext">
+      <Value>Data Source=liftingjournalserver.database.windows.net,1433%3bInitial Catalog=liftingJournal_db%3bUser ID=admin-sql%3bPassword=Po2mm3l22Flrs12</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

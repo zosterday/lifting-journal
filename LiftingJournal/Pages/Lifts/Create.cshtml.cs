@@ -10,9 +10,6 @@ using LiftingJournal.Models;
 
 namespace LiftingJournal.Pages.Lifts
 {
-
-    //TODO: Need to add special valdiation for model. Like all numbers need to be positive and ina a reasonalble range
-
     public class CreateModel : PageModel
     {
         private readonly LiftingJournal.Data.LiftingJournalContext _context;
