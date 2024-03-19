@@ -21,7 +21,3 @@ Click the image above to watch a brief demo video showcasing the features of the
 ## How to Use
 
 Go to [Lifting Journal](https://liftingjournal.azurewebsites.net) and create an account!
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
